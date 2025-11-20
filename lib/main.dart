@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'providers/provedor_localizacao.dart';
 import 'screens/tela_inicial.dart';
+import 'utils/themes.dart';
 
-void main() {
-  runApp(const MeuApp());
-}
+void main() => runApp(const MeuApp());
 
 class MeuApp extends StatelessWidget {
   const MeuApp({super.key});
@@ -17,10 +16,7 @@ class MeuApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Clima App',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-          useMaterial3: true,
-        ),
+        theme: Themes.temaEscuro,
         home: const TelaInicial(),
       ),
     );
